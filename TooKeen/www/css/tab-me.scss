@@ -1,0 +1,53 @@
+#money{
+    font-size: "黑体";
+    color: #575757;
+    background-color: #F8F8F8;
+    .container{
+      border-top: 1px solid #E9E9E9;
+      border-bottom: 1px solid #E9E9E9;
+      padding: 0 0.8rem 0.4rem 0.8rem;
+      margin-top: 0.5rem;
+      background-color: #ffffff;
+    }
+    .ybprofit{
+        font-size: 1rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        span{
+            font-size: 1.4rem;
+            color: #FF4FAE;
+            margin-left: 1rem;
+        }
+    }
+    .input{
+        border: 1px solid #F1F1F1;
+        width: 55%;
+        display: inline-block;
+    }
+    .tixian{
+        border: 1px solid #F1F1F1;
+        width: 35%;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .example{
+        color: #FF4FAE;
+        margin: 0.6rem 0;
+        font-size: 0.9rem;
+    }
+    .text{
+        font-size: 0.6rem;
+    }
+      
+      .txlog{
+          height: 2.2rem;
+          line-height: 2.2rem;
+          padding: 0 0.8rem 0 0.8rem;
+          border-top: 1px solid #E9E9E9;
+          margin-top: 0.5rem;
+          background-color: #ffffff;
+    }
+}

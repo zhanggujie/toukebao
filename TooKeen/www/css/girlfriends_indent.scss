@@ -1,0 +1,52 @@
+#indent{
+    .list{
+       ion-item:nth-of-type(1){
+             border: none;
+       }
+       .item{
+           border-bottom: none;
+       }
+    }
+	 .row { 
+	 	 margin-top: 1rem;
+	    .header-icon {
+	    	 margin-top: 1rem;
+	    	  text-align: center;
+	    	  font-weight: 550;
+	    	  font-size: 1.3rem;
+	    }
+	    .header {
+	    	 color: #FF44AA;
+	    	  padding-bottom: 1rem;
+	    	  border-bottom: 2px solid #FF44AA;
+	    }
+	    .money{
+
+	    	 font-size: 1rem;
+	    	  span {
+
+	    	  	 color: #FF44AA;
+	    	  }
+	    }
+	    .col-25{
+	    	  background-color: #FF44AA;
+	    	  color: white;
+	    	   text-align: center;
+	    	   border-radius: 8px;
+	    	    font-size: 0.5rem;
+	    }
+	    .col-20{
+	    	 color: #FF44AA;
+	    }
+	 }
+	 .site {
+	 	  color: #666666;
+	 	   font-size: .7rem;
+	 	   margin-left: 10px;
+	 }
+	
+	    .article{
+	    	  font-weight:600;
+	    	  color: #000000;
+	    }
+}

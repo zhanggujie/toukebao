@@ -1,0 +1,64 @@
+<ion-view  id="indent" cache-view="false">
+    <ion-nav-buttons>
+        <button class="button button-clear">
+            <i class="icon ion-ios-arrow-left" ng-click="history()"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content  class="conbg" overflow-scroll="false" has-bouncing="true">
+    <ion-list>
+        <ion-item style="padding: 8px 16px;border-bottom:none">
+            <span class="plan" style="text-align: left">购物车</span><span class="plan">确认订单</span><span class="plan" style="text-align: right">下单成功</span>
+        </ion-item>
+        <ion-item style="text-align: center" class="progress-item">
+            <span class="yuan "><i class="icon ion-checkmark-circled wanicolor "></i></span><span class="xian xianbg"></span><span class="yuan "><i class="icon ion-checkmark-circled wanicolor"></i></span><span class="xian" ng-class="{'xianbg':type1==2}"></span><span class="yuan "><i class="icon ion-checkmark-circled icoclor" ng-class="{'wanicolor':type1==2}"></i></span>
+        </ion-item>
+        <ion-item class="item-divider boder">
+            <span>订单详情</span>
+        </ion-item>
+        <ion-item class="item-padding boder item-text-wrap">
+            <img src="img/tijiao-xuanzhe.png" alt="" style="width: 1.5rem ;height: 1.5rem;vertical-align: bottom">
+            <span class="commodity" >{{productName}}</span>
+            <p></p>
+            <span class="prices">价格:￥{{productPrice}}</span>
+            <span class="item-note" style="margin-top: 0">{{productNumber}}件</span>
+        </ion-item>
+        <ion-item class="item-padding boder" ng-repeat="tokerItem in tokerItem">
+            <img src="img/tijiao-xuanzhe.png" alt="" style="width: 1.5rem ;height: 1.5rem;vertical-align: bottom">
+            <span class="commodity">我的拓客项目({{tokerItem.itemName}})</span>
+            <span class="item-note">{{tokerItem.number}}次</span>
+            <span ng-show="false">{{tokerItem.itemId}}</span>
+        </ion-item>
+       <ion-item style="padding: 10px" class="boder margin">
+           <span ng-click="mailMehtode(0)" ><img ng-src="{{zitiImg}}" alt="" class="mail" ></span>
+           <span style="margin-right: 1.5rem;" >自提（默认）</span>
+           <span  ng-click="mailMehtode(1)"><img ng-src="{{youjiImg}}" alt="" class="mail"></span>
+           <span >邮寄</span>
+       </ion-item>
+        <ion-item class="item-input margin boder item-text-wrap">
+            <span class="input-label" style="width: 18%">地址:</span>
+            <span ng-hide="address" style="font-size: 14px">{{user.address}}</span>
+            <input type="text" ng-model="user.address" placeholder="请填写地址" ng-show="address"  ng-click="goaddress()">
+        </ion-item>
+        <ion-item class="item-input margin boder" ng-show="false">
+            <span class="input-label" style="width: 18%">手机号:</span>
+            <input type="text" ng-model="user.phone" placeholder="请输入您的手机号">
+        </ion-item>
+        <ion-item class="item-input margin boder" >
+            <span class="input-label">请填写备注信息(选填)</span>
+            <input type="text" ng-model="user.remark">
+        </ion-item>
+        <ion-item class="boder margin fonts">
+            总计应付 : {{price}}
+        </ion-item>
+        <ion-item class="boder margin">
+            <p>请选择支付方式(目前仅支持微信支付)</p>
+            <div style="padding: 5px ">
+                <img src="img/weixin.png" alt="weixin" style="width: 30px;height: 30px">
+            </div>
+            <span ng-click="choose('WECHAT')" ><img ng-src="{{weixinUrl}}" alt="" class="mail"></span>
+            <span>微信</span>
+        </ion-item>
+    </ion-list>
+        <button class="button  button-block receive" ng-click="tijiao()">提交订单</button>
+    </ion-content>
+</ion-view>

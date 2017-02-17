@@ -1,0 +1,39 @@
+<ion-view title="闺蜜圈订单" id="indent">
+	<ion-nav-buttons side="left">
+		<i class="button-icon icon ion-ios-arrow-left" ng-click="history()"></i>
+	</ion-nav-buttons>
+	<ion-content ng-init="isshow=true; ishide=false">
+		<div class="row icon">
+			<div class="col col-10 header-icon "></div>
+			<div class="col col-40 header-icon" ng-class="{'header' : isshow}" ng-click="isshow=true; ishide=false ;all()">全部订单</div>
+			<div class="col col-40 header-icon" ng-class="{'header' : ishide}" ng-click="isshow=false; ishide=true ;Purchased()">已购买</div>
+			<div class="col col-10 header-icon " ng-class=""></div>
+		</div>
+		<ion-list class="list">
+			
+			<ion-item class="item item-text-wrap" ng-repeat="indent in indents">
+				<div>{{indent.store_name}}</div>
+				<div class="row row-center">
+					<div class="col col-80">
+						<div class="article">{{indent.name}}</div>
+						<div style="margin-top: 1rem;" ng-show="!isGiv">{{indent.orderItems[0].name}} </div>
+						<div style="margin-top: 1rem;" ng-show="isGiv">没有赠送项目 </div>
+					</div>
+					<div class="col col-20">x{{indent.buyCount}}</div>
+				</div>
+				<div class="site">服务地址 : {{indent.address}}</div>
+
+				<div class="row">
+					<div class="col money">
+						合计金额: <span>￥{{indent.totalPrice}}</span>
+					</div>
+					<div class="col col-25" ng-click="buy(indent)">再次购买</div>
+				</div>
+			</ion-item>
+		</ion-list>
+		<!--<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+		</ion-refresher>-->
+		<ion-infinite-scroll   on-infinite="loadMore()" immediate-check="false">
+		</ion-infinite-scroll>
+	</ion-content>
+</ion-view>

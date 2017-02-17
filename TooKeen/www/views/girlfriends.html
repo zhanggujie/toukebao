@@ -1,0 +1,95 @@
+<ion-view title="闺蜜圈" id="girlfriend">
+	<ion-nav-buttons side="left">
+		<i class="button-icon icon ion-ios-arrow-left" ng-click="history()"></i>
+	</ion-nav-buttons>
+	<ion-content>
+		<div class="row row-center header">
+			<div class="col col-35">
+				<div class="font">总消费</div>
+				<span class="money">¥ {{friends.consumption}}</span>
+			</div>
+			<div class="col col-35">
+				<div class="font">闺蜜券收益</div>
+				<span class="money">{{friends.earnings}}</span>
+			</div>
+			<div class="col col-30 quan" ui-sref="zengsong">闺蜜券赠送</div>
+		</div>
+		<ion-list class="list">
+			   
+			    <div>
+				<ion-item class="item item-input item-icon-left item-icon-right" ng-repeat="tab in tabs" ng-click="jump(tab.tab_type)">
+					<div class="icon"><img ng-src="{{tab.path}}"></div>
+					<div class="introduce">{{tab.name}}</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>
+			
+			<!--<div ui-sref="member">
+				<ion-item class="item item-input item-icon-left item-icon-right">
+					<div class="icon"><img src="img/我的订单@2x.png"></div>
+					<div class="introduce">我的订单</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>
+			<div ui-sref="indent">
+				<ion-item class="item item-input item-icon-left item-icon-right">
+					<div class="icon"><img src="img/我的社员@2x.png"></div>
+					<div class="introduce">闺蜜圈</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>
+			<div ui-sref="indent">
+				<ion-item class="item item-input item-icon-left item-icon-right">
+					<div class="icon"><img src="img/闺蜜券.png"></div>
+					<div class="introduce">闺蜜券明细</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>
+			<div ui-sref="code">
+				<ion-item class="item item-input item-icon-left item-icon-right">
+					<div class="icon"><img src="img/二维码@2x.png"></div>
+					<div class="introduce">我的二维码</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>
+			<div ui-sref="indent">
+				<ion-item class="item item-input item-icon-left item-icon-right">
+					<div class="icon"><img src="img/财富介绍@2x.png"></div>
+					<div class="introduce">闺蜜圈介绍</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>
+			<div ui-sref="girlfriends">
+				<ion-item class="item item-input item-icon-left item-icon-right">
+					<div class="icon"><img src="img/财富商品@2x.png"></div>
+					<div class="introduce">拓客商品</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>
+			<div ui-sref="girlfriends">
+				<ion-item class="item item-input item-icon-left item-icon-right">
+					<div class="icon"><img src="img/采购商品.png"></div>
+					<div class="introduce">采购详情</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>
+			 <div ui-sref="girlfriends">
+				<ion-item class="item item-input item-icon-left item-icon-right">
+					<div class="icon"><img src="img/闺蜜圈特权_icon-@2x.png"></div>
+					<div class="introduce">闺蜜特权</div>
+					<i class="button-icon icon ion-ios-arrow-right"></i>
+				</ion-item>
+			</div>-->
+			<ion-item class="item item-button-right row row-center">
+				<div class="col col-70">
+					<div class="one">{{friends.choice}}</div>
+					<div class="two">{{friends.prerogative}}</div>
+				</div>
+				<div class="col col-25" ng-click="go()">{{friends.buy}}</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+	<ion-footer-bar>
+		<div class="title">服务提供商: 怡定美科技</div>
+	</ion-footer-bar>
+</ion-view>

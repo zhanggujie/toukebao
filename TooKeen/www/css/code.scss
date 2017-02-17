@@ -1,0 +1,77 @@
+#code {
+    text-align: center;
+
+    .gainsboro{
+    background-color: gainsboro;
+     }
+    .list {
+        .item {
+//          background-color: gainsboro;
+            border: none;
+            margin-top: -1.2rem;
+
+        }
+        .data_phone {
+            .img {
+                width: 4rem;
+                height: 4rem;
+                margin: 3rem auto 1rem;
+                border-radius: 50%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+            .title {
+                color: red;
+            }
+        }
+        .my_code {
+            #share {
+                margin-top: 20px;
+                 canvas{
+                     width: 60%;
+                     height: 60%;
+                 }
+           }
+        }
+    }
+    .button-block {
+        background-color: #FF44AA;
+        color: white;
+        border-radius: 2rem;
+        width: 80%;
+        margin: 1rem auto;
+    }
+    .popups {
+        width: 90%;
+        height: 10.5rem; 
+        margin: 0 auto;
+        position: absolute;
+        top: calc((100% - 10rem)/2);
+        left: calc(10%/2);
+        background-color: white;
+        border-radius: 8px;
+        z-index: 100;
+        .share {
+            margin: 0.7rem 0;
+        }
+        .row {
+            div {
+                text-align: center;
+                img {
+                    width: 60%;
+                    height: 60%;
+                }
+            }
+        }
+        .cancel {
+             width: 93%;
+              margin: 0 auto;
+            border-top: 1px solid gainsboro ;
+            padding: 0.7rem;
+        }
+    }
+    
+}

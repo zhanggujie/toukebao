@@ -1,0 +1,23 @@
+<ion-view view-title="闺蜜券赠送" id="zengsong">
+	<ion-nav-buttons>
+		<button class="button button-icon icon ion-ios-arrow-left" ng-click="history()"></button>
+	</ion-nav-buttons>
+	<ion-content>
+		<input type="text" placeholder="请输入会员名查询" class="input" ng-model="$parent.username">
+		<button class="search" ng-click="Search()">搜索</button>
+		<div class="container">
+			<span class="account">系统账号</span>
+			<button class="cash" ng-click="cash()">兑现金</button>
+		</div>
+		<div class="zengsong" style="margin-top: 0.5rem;" ng-repeat="item in items">
+			<div class="list">
+				<a class="item item-thumbnail-left" href="#">
+					<img ng-src="{{item.userImgPath}}">
+					<h2 style="margin: 1.2rem 0 0.5rem 0;">{{item.userName}}</h2>
+					<p>上级：{{item.superiorName}}</p>
+				</a>
+				<button class="give" ng-click="give(item.userId)">赠送</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

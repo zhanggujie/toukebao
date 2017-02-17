@@ -1,0 +1,39 @@
+<ion-view view-title="闺蜜圈" id="guimiquan">
+    <ion-nav-buttons>
+        <button class="button button-clear" ng-click="banck()">
+            <i class="icon ion-ios-arrow-left"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content overflow-scroll="false" has-bouncing="true">
+        <ion-list ng-hide="isShowPu">
+            <ion-item class="item-avatar boder " ng-repeat="data in userlist">
+                <img ng-src="{{data.img_path}}" alt="">
+                <span class="item-note" style="color: #333">下级:{{data.downPersionNum}}人</span>
+                <h2>{{data.name}}</h2>
+                <p style="font-size: 12px">入团时间:{{data.createtime*1000|date:"yyyy-MM-dd"}}</p>
+                <div class="row" style="padding: 0">
+                    <div class="item-span col-25" ng-class="{'subordinate':data.downPersionNum<1}" ng-click="duwm(data.user_id,data.downPersionNum)">查看下级</div>
+                    <div class="col"></div>
+                    <div class="item-span col col-25" ng-click="myPopup(data.user_id)">换人</div>
+                    <div class="col"></div>
+                    <div class="item-span col-25" ng-class="{'subordinate':data.userType==2}" ng-click="setting(data.userType,data.user_id)">设为老板娘</div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-list ng-show="isShowPu">
+
+            <ion-item class="item-avatar boder " ng-repeat="data in userlist2">
+                 <img ng-src="{{data.img_path}}" alt="">
+                <h2>{{data.name}}</h2>
+                <p style="font-size: 12px">入团时间:{{data.createtime*1000|date:"yyyy-MM-dd"}}</p>
+                <div class="row" style="padding: 0">
+                    <span class="col" style="color: #333;padding: 3px 0">下级:{{data.downPersionNum}}人</span>
+                    <div class="col"></div>
+                    <div class="item-span  col-25" ng-class="{'subordinate':data.downPersionNum<1}" ng-click="duwm(data.user_id,data.downPersionNum)">查看下级</div>
+                    <div class="col"></div>
+                    <div class="item-span col-25" ng-click="myPopup(data.user_id)"> 换人 </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

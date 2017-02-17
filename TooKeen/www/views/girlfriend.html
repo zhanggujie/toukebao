@@ -1,0 +1,22 @@
+<ion-view view-title="闺蜜特权" id="girlfriends" cache-view="false">
+    <ion-nav-buttons side="left">
+            <i class="button-icon icon ion-ios-arrow-left" ng-click="history()"></i>
+    </ion-nav-buttons>
+    <ion-content class="conbg" overflow-scroll="false" has-bouncing="true">
+        <ion-list>
+            <ion-item class="item-body" style="padding: 0;border: none;margin-top: -1px">
+                <img class="full-image" src="{{girImgurl}}">
+                <p style="padding: 5px 0 5px 10px;margin-top: 0;color: #333333;font-size: 0.7rem">
+                    {{text}}
+                </p>
+            </ion-item>
+            <ion-item class="receive-record" >
+              <span>领取记录</span>
+            </ion-item>
+            <ion-item class="get-time  item-text-wrap" ng-repeat="list in lists" ng-class="{'guo1i':list.type==2,'weilingqu':list.type==1,'lingqu':list.type==0}">
+                <span>{{list.time}}</span> <span>{{list.name}}</span>
+            </ion-item>
+        </ion-list>
+        <button class="button  button-block receive"  ng-click="draw(backButtonText)">{{backButtonText}}</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,72 @@
+<ion-view view-title="颜币收益" id="shouyi">
+  <ion-nav-buttons>
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="history()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="profit">
+      <div class="left">
+        <div>颜币收益</div>
+        <div class="text">{{sumScoreValue}}</div>
+      </div>
+      <div class="right">
+        <div class="right_top">颜币提现</div>
+        <div class="right_bottom">颜币赠送</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="symx" ng-class= "{'active' : isHl}" ng-click="symx()">红利明细</div>
+      <div class="hr"></div>
+      <div class="txmx" ng-class= "{'active' : isCash}" ng-click="cash()">提现明细</div>
+      <div class="hr"></div>
+      <div class="zsmx" ng-class= "{'active' : isZs}" ng-click="zsmx()">赠送明细</div>
+    </div>
+    <div class="sylog" ng-repeat="yielditem in yielditems" ng-show="sy">
+      <div>{{yielditem.ticketValue}}</div>
+      <div>{{yielditem.sourceUserName}}</div>
+      <div>{{yielditem.recordTime*1000 | date:'yyyy.MM.dd'}}</div>
+      <div class="list" ng-if="yielditem.status=='未领取'">
+        <select>
+      <option selected>请选择</option>
+      <option>领取</option>
+      <option>拒绝</option>
+    </select>
+      </div>
+      <!--<div ng-if="yielditem.status=='未领取'"><button>领取</button></div>-->
+      <div ng-if="yielditem.status=='已领取'"><button>已领取</button></div>
+      <div ng-if="yielditem.status=='已拒绝'"><button>已拒绝</button></div>
+      <div ng-if="yielditem.status=='已退回'"><button>已退回</button></div>
+    </div>
+      <div class="sylog" ng-repeat="yielditem in yielditems" ng-show="cash">
+      <div>3{{yielditem.ticketValue}}</div>
+      <div>3{{yielditem.sourceUserName}}</div>
+      <div>3{{yielditem.recordTime*1000 | date:'yyyy.MM.dd'}}</div>
+      <div class="list" ng-if="yielditem.status=='未领取'">
+        <select>
+      <option selected>请选择</option>
+      <option>领取</option>
+      <option>拒绝</option>
+    </select>
+      </div>
+      <!--<div ng-if="yielditem.status=='未领取'"><button>领取</button></div>-->
+      <div ng-if="yielditem.status=='已领取'"><button>已领取</button></div>
+      <div ng-if="yielditem.status=='已拒绝'"><button>已拒绝</button></div>
+      <div ng-if="yielditem.status=='已退回'"><button>已退回</button></div>
+    </div>
+      <div class="sylog" ng-repeat="yielditem in yielditems" ng-show="zs">
+      <div>1{{yielditem.ticketValue}}</div>
+      <div>1{{yielditem.sourceUserName}}</div>
+      <div>1{{yielditem.recordTime*1000 | date:'yyyy.MM.dd'}}</div>
+      <div class="list" ng-if="yielditem.status=='未领取'">
+        <select>
+      <option selected>请选择</option>
+      <option>领取</option>
+      <option>拒绝</option>
+    </select>
+      </div>
+      <!--<div ng-if="yielditem.status=='未领取'"><button>领取</button></div>-->
+      <div ng-if="yielditem.status=='已领取'"><button>已领取</button></div>
+      <div ng-if="yielditem.status=='已拒绝'"><button>已拒绝</button></div>
+      <div ng-if="yielditem.status=='已退回'"><button>已退回</button></div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,38 @@
+<ion-view id="dashang" hide-nav-bar="true">
+    <div class="header">
+        <a href="#" class="img1"><img src="./img/return.png" alt=""></a>
+        <a href="#" class="img2"><img src="./img/share.png" alt=""></a>
+    </div>
+    <ion-content>
+    <div class="bg">
+        <img ng-src="{{$parent.mainImgUrl}}" alt="">
+    </div>
+    <div class="container">
+        <span class="text1">{{$parent.name}}</span>
+        <div class="text2">市场价：¥{{$parent.totalPrice}}</div>
+        <div class="text3">购买数量<img id="img1" ng-click="down()" src="./img/tqsp-gmsl-.png" alt=""><span class="num">{{set.number}}</span>
+        <img id="img2" ng-click="up()" src="./img/+.png" alt="">
+        <img class="right" ng-src="{{$parent.watermark}}" alt=""></div>
+    </div>
+     <ion-list>
+			 <ion-item class="item item-text-wrap" ng-repeat = "yulan in yulans">
+				  <div class="lbpd"><img ng-src={{yulan.path}} alt="" /></div>
+				   <div class="xiangmu">
+			 	<span class="ioc">推荐项目</span>
+			 	 <div class="subtitle">{{yulan.NAME}}</div>
+			 	 <div class="jieshao">项目介绍 : {{yulan.PROFILE}}</div>
+			     <div class="row">
+			     	<div class="col">服务次数 : <span class="color">{{yulan.nursing_time}}次</span> </div>
+			     	<div class="col color">￥{{yulan.price}}</div>
+			     </div>
+				 </div>
+				  <div class="gongxiao">
+					  <span class="ioc">项目功效</span>
+			 	 <div class="xiaoguo jieshao">{{yulan.apply}}噢看热回帖如图分类日交通诶福美来多若偷过货看偶尔头发哦看今后诶如图发给偶尔了如何具体佛诶</div>
+				  </div>
+			 </ion-item>
+			 
+			 </ion-list>
+    </ion-content>
+    <div class="footer" ng-click="buy()">打赏购买</div>
+</ion-view>

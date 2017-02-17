@@ -1,0 +1,30 @@
+<ion-view title="我的二维码" id="code">
+	 <ion-nav-buttons side="left">
+        <i class="button-icon icon ion-ios-arrow-left" ng-click="history()"></i>
+    </ion-nav-buttons>
+    <ion-content class="center" ng-class={'gainsboro':isshow}>
+    	<ion-list class="list">
+    		<ion-item class="data_phone" ng-class={'gainsboro':isshow}>
+    			 <div class="img"><img  src="img/个人资料@2x.png"/></div>
+    			  <div class="title">我是 {{codes.name}}</div>
+    		</ion-item>
+    		<ion-item class="my_code" ng-class={'gainsboro':isshow}>
+    			 <div class="text">邀请你加入  {{codes.name}}的美业财富列车</div>
+    			  <div id="share"></div>
+    		</ion-item>
+    	</ion-list>
+    	 
+     <button class="button button-block" ng-click="show()">立即分享</button>
+     <div class="popups" ng-show="isshow">
+    	  	<div class="share"> 分享到 </div>
+    	 	<div class="row">
+    	 		<div class="col" ng-click="weixinFriends()"> <img src="img/weixin.png" alt="微信好友" /> <div>微信好友</div> </div>
+    	 		<div class="col" ng-click="weixinShare()"> <img src="img/penmgyouquan.png" alt="朋友圈" /><div>朋友圈</div> </div>
+    	 		<div class="col" ng-click="qqFriends()"> <img src="img/qq.png" alt="朋友圈" /> <div>QQ好友</div>	</div>
+    	 		<div class="col" ng-click="Weibo()"> <img src="img/weibo.png" alt="新浪微博" /><div>新浪微博</div> </div>
+    	 	</div>
+    	 	<div class="cancel" ng-click="hide()">取消</div>
+    	 </div>
+    </ion-content>
+</ion-view>
+       

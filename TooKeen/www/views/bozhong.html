@@ -1,0 +1,24 @@
+<ion-view id="luntan" title=''>
+	<ion-nav-buttons>
+   <button class="button button-icon icon ion-ios-arrow-left" ng-click="history()"></button>
+	</ion-nav-buttons>
+  <ion-content>
+    <div class="luntan_container">
+    <div class="luntan_title">分享美丽，获得财富，拾羽让您的生活更美好</div> 
+    <div class="object">
+    <div class="luntan_object">－播种对象－</div>
+    <div class="luntan_img row row-wrap">
+      <div class="col col-25" style="text-align:center" ng-repeat="item in items">
+          <img ng-src="{{item.userImgPath}}" alt="">{{item.userName}}
+      </div>
+    </div>
+    </div>
+     <div class="money">
+      <span>¥{{$parent.sowPrice}}</span><span>播种金额：</span><br>
+      <span>¥{{$parent.warePrice}}</span><span>商品金额：</span><br>
+      <span>¥{{$parent.totalPrice}}</span><span>合计支付：</span><br>
+    </div>
+    </div>
+    <div class="luntan_pay" ng-click="sow()">播种及支付</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,160 @@
+#dashang{
+    font-size: "黑体";
+    color: #575757;
+    width: 100%;
+    .header{
+        width: 100%;
+        height: 65px;
+        background-color: #ffffff;
+        opacity: 0.5;
+        padding: 26px 1.2rem 0 1.2rem;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        .img1{
+            float: left;
+            img{
+                width: 12px;
+                height: 20px;
+            }
+        }
+        .img2{
+            float: right;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .bg img{
+        width: 100%;
+//      height: 23rem;
+    }
+    .container{
+        width: 100%;
+        padding: 0.8rem;
+    }
+    .text1{
+        font-size: 1rem;
+        color: #4A4A4A;
+    }
+      .text2{
+        font-size: 0.9rem;
+        color: #4A4A4A;
+        margin: 0.5rem 0 0.3rem 0;
+    }
+     .text3{
+        font-size: 0.9rem;
+        color: #4A4A4A;
+        height: 30px;
+        line-height: 30px;
+        #img1{
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin: 0 0.6rem 0 1.3rem;
+        }
+        #img2{
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin: 0 0.6rem;
+            display: none;
+        }
+        .num{
+            color: #AA506E;
+        }  
+        .right{
+            float: right;
+            width: 7.2rem;
+            height: 2rem;
+        }      
+    }
+    .bg2{
+        background-image: url(./../img/song.png);
+        width: 100%;
+        height: 13rem;
+        background-size: 100% 100%;
+        margin-top: 10px;
+    }
+      .item{
+                 padding: 0;
+                   .lbpd{
+                          height: 15rem;
+                        //    border: 1px solid red;
+                         img{
+                                width: 100%;
+                                height: 100%;
+                         }
+                   }
+                .xiangmu{
+                       padding-left: 15px;
+                        border-top:  1px solid #ff44aa;
+                  //      border: 1px solid goldenrod;
+                .ioc{
+                    position: relative;
+                    left: -15px;
+                       display: inline-block;
+                        width:6rem;
+                         height: 2rem;
+                         color: white;
+                     background-color: #ff44aa;
+                         text-align: center;
+                         line-height: 2rem;
+                }
+             
+                .subtitle{
+                     margin:.8rem 0 .8rem 0;
+                      font-weight: 550;
+                }
+                .jieshao{
+                          color: dimgrey;  
+                          font-size: .9rem;   
+                }
+         
+                .row{
+                      div:nth-of-type(1){
+                            margin-left: -10px;
+                      }
+                    .color {
+                         color: red;
+                    }
+                }
+                }
+                .gongxiao{
+                        border-top:  1px solid #ff44aa;
+                  
+                       padding-left: 15px;                      
+                       .ioc{
+                       position: relative;
+                    left: -15px;
+                       display: inline-block;
+                        width:6rem;
+                         height: 2rem;
+                         color: white;
+                     background-color: #ff44aa;
+                         text-align: center;
+                         line-height: 2rem;
+                }
+                 .jieshao{
+                          color: dimgrey;  
+                          font-size: .9rem;   
+                        margin:.8rem 0 .8rem 0;
+
+                }
+                }
+          }
+}
+ .footer{
+        width: 70%;
+        height: 2.5rem;
+        background-color: #FF44AA;
+        margin-left: 15%;
+        text-align: center;
+        line-height: 2.5rem;
+        color: #ffffff;
+        font-size: 1.2rem;
+        position: fixed;
+        bottom: 47px;
+        border-radius: 20px;
+    }

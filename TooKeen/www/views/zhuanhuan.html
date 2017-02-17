@@ -1,0 +1,16 @@
+<ion-view view-title="闺蜜券转换" id="zhuanhuan">
+  <ion-nav-buttons>
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="history()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="container">
+      <div class="ybprofit">我的闺蜜券<span>{{$parent.scoreValue}}</span></div>
+      <input type="text" placeholder="请输入闺蜜券数量" class="input" ng-model="$parent.guiminum">
+      <span>转换说明：</span><br>
+      <span class="text">100闺蜜券=1元人民币</span><br>
+      <span class="text">最低提现为10000闺蜜券，每次提现为10000的倍数</span><br>
+      <span class="text">闺蜜券转换现金，需要扣除转换额度的20%作为税金扣除</span>
+    </div>
+     <div class="queren" ng-click="zhuanhuan()">确认</div>
+  </ion-content>
+</ion-view>

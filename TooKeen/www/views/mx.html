@@ -1,0 +1,33 @@
+<ion-view view-title="闺蜜券明细" id="mx" cache-view="false">
+ <ion-nav-buttons>
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="history()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+   <div class="profit">
+     <div class="left"> 
+       <div>闺蜜圈收益</div>
+        <div class="text">{{sumScoreValue}}</div>
+     </div>
+     <div class="right" ng-click="zengsong()">闺蜜券赠送</div>
+   </div>
+   <div class="container">
+      <div class="symx" ng-class= "{'active' : isShow}" ng-click="shou()">收益明细</div>
+     <div class="hr"></div>
+     <div class="zsmx" ng-class= "{'active' : isHide}" ng-click="zeng()">赠送明细</div>
+   </div>
+    <div id="sylog" ng-repeat="item in items" ng-show="sy">
+       <div>{{item.ticketValue}}</div>
+       <div>{{item.sourceUserName}}</div>
+       <div>{{item.recordTime*1000 | date:'yyyy.MM.dd'}}</div>
+       <div ng-if="item.status == '未领取'"><button ng-click="showConfirm(item.sourceUserName, item.ticketValue, item.id, item.status)">领取</button></div>
+        <div ng-if="item.status == '已领取'">已领取</div>
+        <div ng-if="item.status == '已拒绝'">已拒绝</div>
+     </div>
+     <div id="zslog" ng-repeat="log in logs" ng-show="zs">
+       <div>{{-log.ticketValue}}</div>
+       <div>{{log.sourceUserName}}</div>
+       <div>{{log.recordTime*1000 | date:'yyyy.MM.dd'}}</div>
+       <div>{{log.status}}</div>
+     </div>
+  </ion-content>
+</ion-view>
